@@ -17,7 +17,11 @@
  };
 
  function loadMultipleImgs() {
-     for (let img of imgs.names) {
-         imgs[`${img}`] = loadImage(`../Img/${img}.png`);
+     try {
+         for (let img of imgs.names) {
+             imgs[`${img}`] = loadImage(`../Img/${img}.png`);
+         }
+     } catch (e) {
+         print(e);
      }
  }
