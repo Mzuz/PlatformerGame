@@ -1,0 +1,41 @@
+//Dziedziczenie:
+class Particle extends p5.Vector {
+    constructor(x, y) {
+        super(x, y);
+        this.vel = p5.Vector.random2D();
+    }
+
+    update() {
+        this.add(this.vel);
+    }
+
+    show() {
+        stroke(255);
+        noFill();
+        strokeWeight(24);
+        point(this.x, this.y);
+    }
+}
+
+class Confetti extends Particle {
+    constructor(x, y) {
+        super(x, y);
+        this.bright = random(255);
+        this.r = 2;
+    }
+
+    update() {
+        super.update();
+        // this.r += random(-10, 10);
+    }
+
+    show() {
+        stroke(255);
+        strokeWeight(2);
+        fill(this.bright);
+        circle(this.x, this.y, this.r);
+    }
+
+}
+
+//Przewijanie:

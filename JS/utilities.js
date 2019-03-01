@@ -15,3 +15,9 @@
 
      return this > minVal && this < maxVal;
  };
+
+ function loadMultipleImgs() {
+     for (let img of imgs.names) {
+         imgs[`${img}`] = loadImage(`../Img/${img}.png`);
+     }
+ }
