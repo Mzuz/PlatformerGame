@@ -36,14 +36,14 @@ function draw() {
 
 function steering() {
     if (keyWentDown(RIGHT_ARROW)) {
-        player.dir.x = 0;
+        player.sprite.velocity.x = 3;
         player.speed = 2;
     } else if (keyWentDown(LEFT_ARROW)) {
-        player.dir.x = 0;
-        player.speed = 2;
+        player.sprite.velocity.x = -3;
+        player.speed = -2;
+    } else if (keyWentDown(UP_ARROW)) {
+        player.sprite.velocity.y = -50;
     }
 
-    // if (keyWentDown(UP_ARROW)) player.sprite.velocity.y = -2;
-
-    if (keyWentUp(RIGHT_ARROW) || keyWentUp(LEFT_ARROW)) player.speed = 0;
+    if (keyWentUp(RIGHT_ARROW) || keyWentUp(LEFT_ARROW) || keyWentUp(UP_ARROW)) player.speed = 0;
 }

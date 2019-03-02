@@ -5,6 +5,6 @@ const imgs = {
 const Background = {};
 
 const gameProperties = {
-    gravity: 0.2,
+    gravity: 1,
     gameOver: false
 }

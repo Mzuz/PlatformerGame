@@ -26,7 +26,6 @@ class Player {
 
     update() {
         this.sprite.collide(solids);
-        // this.sprite.displace(boxes);
         this.sprite.velocity.y += gameProperties.gravity;
 
         this.sprite.addSpeed(this.speed, this.dir)
@@ -52,7 +51,6 @@ class Box extends Obstacle {
         imgs.box.resize(w, h);
         this.sprite.addImage(imgs.box);
         this.sprite.addToGroup(solids);
-        // this.sprite.addToGroup(boxes);
     }
 
     update() {
